@@ -1,0 +1,45 @@
+#!/usr/bin/env sh
+
+GLOBALFLAG='--global'
+if [ "$1" = "--local" ]; then
+    echo "Configuring git aliases in local repository..."
+    GLOBALFLAG=''
+else
+    echo "Configuring global git aliases..."
+fi
+
+config() {
+    git config $GLOBALFLAG "$@"
+}
+
+config alias.lg "log --graph"
+config alias.l "log --graph --pretty=format:'%C(auto)%<(15,trunc)%h%<(20,trunc)%an%<(18,trunc)%ai %d %s'"
+
+config alias.ll "l --all"
+config alias.a "add"
+config alias.ai "add -i"
+config alias.co "commit"
+config alias.e "commit --amend"
+config alias.ef "commit --amend -C HEAD"
+config alias.b "branch"
+config alias.bvv "branch -vv"
+config alias.bb "branch -a"
+config alias.bcontains "branch -a -r --contains"
+config alias.f "fetch"
+config alias.ff "fetch --all"
+config alias.u "pull -r"
+config alias.s "status"
+config alias.c "checkout"
+config alias.r "rebase"
+config alias.ri "rebase -i"
+config alias.rcontinue "rebase --continue"
+config alias.rabort "rebase --abort"
+config alias.rskip "rebase --skip"
+config alias.sm "submodule"
+config alias.kk "!gitk --all &"
+config alias.work "!git gui & gitk --all &"
+config alias.g "!git gui &"
+config alias.ci "citool"
+config alias.cia "citool --amend"
+
+echo "Finished."
