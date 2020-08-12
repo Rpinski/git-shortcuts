@@ -12,11 +12,21 @@ config() {
     git config $GLOBALFLAG "$@"
 }
 
-config alias.ex "!gitex.cmd"
-config alias.exco "ex commit"
-config alias.exr "ex rebase --branch"
-config alias.exstash "ex stash"
-config alias.exconflicts "ex mergeconflicts"
+unconfig() {
+    git config $GLOBALFLAG --unset "$@"
+}
+
+unconfig alias.ex
+unconfig alias.exco
+unconfig alias.exr
+unconfig alias.exstash
+unconfig alias.exconflicts
+
+config alias.x "!gitex.cmd"
+config alias.xco "x commit"
+config alias.xr "x rebase --branch"
+config alias.xstash "x stash"
+config alias.xconflicts "x mergeconflicts"
 
 
 echo "Finished."
