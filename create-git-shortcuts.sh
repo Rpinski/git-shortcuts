@@ -12,6 +12,13 @@ config() {
     git config $GLOBALFLAG "$@"
 }
 
+unconfig() {
+    git config $GLOBALFLAG --unset "$@"
+}
+
+unconfig alias.ci
+unconfig alias.cia
+
 config alias.lg "log --graph"
 config alias.l "log --graph --pretty=format:'%C(auto)%<(15,trunc)%h%<(20,trunc)%an%<(18,trunc)%ai %d %s'"
 config alias.ll "l --all"
@@ -44,7 +51,7 @@ config alias.sm "submodule"
 config alias.kk "!gitk --all &"
 config alias.work "!git gui & gitk --all &"
 config alias.g "!git gui &"
-config alias.ci "citool"
-config alias.cia "citool --amend"
+config alias.gi "citool"
+config alias.ge "citool --amend"
 
 echo "Finished."
