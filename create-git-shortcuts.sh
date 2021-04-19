@@ -55,5 +55,7 @@ config alias.gi "citool"
 config alias.ge "citool --amend"
 config alias.mt "mergetool"
 config alias.dt "difftool"
+config alias.t "tag"
+config alias.ta "tag -a"
 
 echo "Finished."
