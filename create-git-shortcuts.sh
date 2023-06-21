@@ -18,6 +18,7 @@ unconfig() {
 
 unconfig alias.ci
 unconfig alias.cia
+unconfig alias.bcontains
 
 config alias.lg "log --graph"
 config alias.l "log --graph --pretty=format:'%C(auto)%<(15,trunc)%h%<(20,trunc)%an%<(18,trunc)%ai %d %s'"
@@ -31,7 +32,10 @@ config alias.b "branch"
 config alias.bvv "branch -vv"
 config alias.bb "branch -a"
 config alias.bf "branch -f"
-config alias.bcontains "branch -a -r --contains"
+config alias.bc "branch -a -r --contains"
+config alias.bd "branch -d"
+config alias.bdd "branch -D"
+config alias.bm "branch -m"
 config alias.f "fetch"
 config alias.ff "fetch --all"
 config alias.u "pull -r"
