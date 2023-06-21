@@ -18,6 +18,6 @@ unconfig() {
 
 config tig.line-graphics "utf-8"
 config tig.diff-options "-m"
-config tig.color.cursor "default default reverse"
+config tig.color.cursor "black white"
 
 echo "Finished."
