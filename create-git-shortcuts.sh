@@ -73,7 +73,7 @@ config alias.mt "mergetool"
 config alias.dt "difftool"
 config alias.t "tag"
 config alias.ta "tag -a"
-config alias re "reset"
+config alias.re "reset"
 config alias.reh "reset --hard"
 
 echo "Finished."
