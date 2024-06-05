@@ -85,5 +85,6 @@ config alias.re "reset"
 config alias.reh "reset --hard"
 config alias.x "restore"
 config alias.xs "restore --staged"
+config alias.rem "remote"
 
 echo "Finished."
