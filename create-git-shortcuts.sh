@@ -24,9 +24,10 @@ unconfig alias.bvv
 config alias.lg "log --graph"
 config alias.l "log --graph --pretty=format:'%C(auto)%<(15,trunc)%h%<(20,trunc)%an%<(18,trunc)%ai %d %s'"
 config alias.ll "l --all"
-config alias.ld "!git l HEAD $1"
-config alias.ldmaster "ld origin/master"
-config alias.ldmain "ld origin/main"
+config alias.lc '!git l $1 $2 `git merge-base $1 $2`^!'
+config alias.lchead '!git lc HEAD $1'
+config alias.lcmaster "lchead origin/master"
+config alias.lcmain "lchead origin/main"
 config alias.a "add"
 config alias.aa "add -a"
 config alias.ai "add -i"
