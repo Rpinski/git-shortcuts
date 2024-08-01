@@ -28,6 +28,8 @@ config alias.lc '!git l $1 $2 `git merge-base $1 $2`^!'
 config alias.lchead '!git lc HEAD $1'
 config alias.lcmaster "lchead origin/master"
 config alias.lcmain "lchead origin/main"
+config alias.lp "l -p"
+config alias.llp "ll -p"
 config alias.a "add"
 config alias.aa "add -a"
 config alias.ai "add -i"
