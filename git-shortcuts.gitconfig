@@ -1,0 +1,87 @@
+[alias]
+    lg = log --graph
+    l = log --graph --pretty=format:'%C(auto)%<(15,trunc)%h%<(20,trunc)%an%<(18,trunc)%ai %d %s'
+    ll = l --all
+    lc = !git l $1 $2 `git merge-base $1 $2`^!
+    lchead = !git lc HEAD $1
+    lcmaster = lchead origin/master
+    lcmain = lchead origin/main
+    lcu = lchead @{upstream}
+    lp = l -p
+    llp = ll -p
+    a = add
+    ai = add -i
+    aa = add -a
+    ap = add -p
+    au = add -u
+    co = commit
+    e = commit --amend
+    ef = commit --amend -C HEAD
+    b = branch
+    bb = branch -a
+    bf = branch -f
+    bv = branch -vv --sort=-committerdate
+    bc = branch -a -r --contains
+    bd = branch -d
+    bdd = branch -D
+    bm = branch -m
+    bgone = !git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
+    fixmaster = branch -f master origin/master
+    fixmain = branch -f main origin/main
+    t = tag
+    ta = tag -a
+    tc = tag --contains
+    f = fetch --tags --force --prune
+    ff = fetch --tags --force --all --prune
+    u = pull -r
+    umaster = !git fetch && git rebase origin/master
+    umain = !git fetch && git rebase origin/main
+    p = push
+    pu = push -u
+    pf = push --force-with-lease
+    pt = push --tags
+    s = status
+    c = checkout
+    cb = checkout -b
+    cmaster = !git checkout master && git pull --rebase
+    cmain = !git checkout main && git pull --rebase
+    cbmaster = !git cmaster && git cb $1
+    cbmain = !git cmain && git cb $1
+    cp = cherry-pick
+    r = rebase
+    ri = rebase -i
+    rc = rebase --continue
+    ra = rebase --abort
+    rs = rebase --skip
+    rmaster = !git fetch origin && git rebase origin/master
+    rmain = !git fetch origin && git rebase origin/main
+    rimaster = !git fetch origin && git rebase -i origin/master
+    rimain = !git fetch origin && git rebase -i origin/main
+    mmaster = !git fetch origin && git merge origin/master
+    mmain = !git fetch origin && git merge origin/main
+    sm = submodule
+    y = stash
+    yp = stash pop
+    yl = stash list
+    ya = stash apply
+    yd = stash drop
+    yu = stash push -u
+    re = reset
+    reh = reset --hard
+    rem = remote
+    x = restore
+    xs = restore --staged
+    mt = mergetool
+    dt = difftool
+    kk = !gitk --all &
+    work = !git gui & gitk --all &
+    g = !git gui &
+    gi = citool
+    ge = citool --amend
+
+[fetch]
+    prune = true
+[pull]
+    rebase = true
+[push]
+    default = current
