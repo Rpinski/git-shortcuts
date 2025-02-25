@@ -29,6 +29,7 @@
     fixmaster = branch -f master origin/master
     fixmain = branch -f main origin/main
     t = tag
+    tt = tag --sort=-taggerdate
     ta = tag -a
     tc = tag --contains
     f = fetch --tags --force --prune
