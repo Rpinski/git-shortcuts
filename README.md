@@ -9,9 +9,17 @@ cd <your_directory>
 git clone https://github.com/Rpinski/git-shortcuts.git
 ```
 
-Add following lines to your `.gitconfig` file:
+Execute the setup script:
+
+```
+cd git-shortcuts
+./setup.sh
+```
+
+It will include the shortcuts and additional settings (if you like) to your global Git config:
 
 ```
 [include]
     path = <your_directory>/git-shortcuts/git-shortcuts.gitconfig
+    path = <your_directory>/git-shortcuts/git-goodies.gitconfig
 ```

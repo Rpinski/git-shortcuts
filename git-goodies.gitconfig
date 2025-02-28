@@ -1,0 +1,12 @@
+[fetch]
+    prune = true
+    pruneTags = true
+[pull]
+    rebase = true
+[push]
+    default = current
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true

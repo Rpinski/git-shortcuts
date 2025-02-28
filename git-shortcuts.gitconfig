@@ -79,10 +79,3 @@
     g = !git gui &
     gi = citool
     ge = citool --amend
-
-[fetch]
-    prune = true
-[pull]
-    rebase = true
-[push]
-    default = current
