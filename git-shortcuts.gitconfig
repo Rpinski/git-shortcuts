@@ -72,6 +72,7 @@
     rem = remote
     x = restore
     xs = restore --staged
+    bi = bisect
     mt = mergetool
     dt = difftool
     kk = !gitk --all &
