@@ -4,7 +4,7 @@
     ll = l --all
     lc = !git l $1 $2 `git merge-base $1 $2`^!
     lchead = !git lc HEAD $1
-    lcmaster = lchead origin/master
+    lcmast = lchead origin/master
     lcmain = lchead origin/main
     lcu = lchead @{upstream}
     lp = l -p
@@ -27,7 +27,7 @@
     bm = branch -m
     bu = branch --unset-upstream
     bgone = !git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D
-    fixmaster = branch -f master origin/master
+    fixmast = branch -f master origin/master
     fixmain = branch -f main origin/main
     t = tag
     tt = tag --sort=-taggerdate
@@ -36,7 +36,7 @@
     f = fetch --tags --force --prune
     ff = fetch --tags --force --all --prune
     u = pull -r
-    umaster = !git fetch && git rebase origin/master
+    umast = !git fetch && git rebase origin/master
     umain = !git fetch && git rebase origin/main
     p = push
     pu = push -u
@@ -45,9 +45,9 @@
     s = status
     c = checkout
     cb = checkout -b
-    cmaster = !git checkout master && git pull --rebase
+    cmast = !git checkout master && git pull --rebase
     cmain = !git checkout main && git pull --rebase
-    cbmaster = !git cmaster && git cb $1
+    cbmast = !git cmaster && git cb $1
     cbmain = !git cmain && git cb $1
     cp = cherry-pick
     r = rebase
@@ -55,11 +55,11 @@
     rc = rebase --continue
     ra = rebase --abort
     rs = rebase --skip
-    rmaster = !git fetch origin && git rebase origin/master
+    rmast = !git fetch origin && git rebase origin/master
     rmain = !git fetch origin && git rebase origin/main
-    rimaster = !git fetch origin && git rebase -i origin/master
+    rimast = !git fetch origin && git rebase -i origin/master
     rimain = !git fetch origin && git rebase -i origin/main
-    mmaster = !git fetch origin && git merge origin/master
+    mmast = !git fetch origin && git merge origin/master
     mmain = !git fetch origin && git merge origin/main
     sm = submodule
     y = stash
