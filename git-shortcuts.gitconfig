@@ -48,6 +48,8 @@
     cbmast = !git cmaster && git cb $1
     cbmain = !git cmain && git cb $1
     cp = cherry-pick
+    cpc = cherry-pick --continue
+    cpa = cherry-pick --abort
     r = rebase
     ri = rebase -i
     rc = rebase --continue
