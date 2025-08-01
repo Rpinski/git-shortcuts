@@ -57,6 +57,9 @@
     rmain = !git fetch origin && git rebase origin/main
     rimast = !git fetch origin && git rebase -i origin/master
     rimain = !git fetch origin && git rebase -i origin/main
+    m = merge
+    mc = merge --continue
+    ma = merge --abort
     mmast = !git fetch origin && git merge origin/master
     mmain = !git fetch origin && git merge origin/main
     sm = submodule
