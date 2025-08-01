@@ -36,8 +36,6 @@
     f = fetch --tags --force --prune
     ff = fetch --tags --force --all --prune
     u = pull -r
-    umast = !git fetch && git rebase origin/master
-    umain = !git fetch && git rebase origin/main
     p = push
     pu = push -u
     pf = push --force-with-lease
