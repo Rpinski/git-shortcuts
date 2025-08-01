@@ -73,6 +73,7 @@
     yu = stash push -u
     re = reset
     reh = reset --hard
+    undo = reset --mixed HEAD~1
     rem = remote
     x = restore
     xs = restore --staged
