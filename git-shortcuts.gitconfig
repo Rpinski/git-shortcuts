@@ -78,6 +78,9 @@
     x = restore
     xs = restore --staged
     bi = bisect
+    bis = bisect start
+    big = bisect good
+    bib = bisect bad
     mt = mergetool
     dt = difftool
     kk = !gitk --all &
