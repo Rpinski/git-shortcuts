@@ -30,9 +30,9 @@
     fixmaster = branch -f master origin/master
     fixmain = branch -f main origin/main
     t = tag
-    tt = tag --sort=-taggerdate
+    tt = tag --sort=-creatordate
     ta = tag -a
-    tc = tag --contains
+    tc = tag --sort=-creatordate --contains
     f = fetch --tags --force --prune
     ff = fetch --tags --force --all --prune
     u = pull -r
